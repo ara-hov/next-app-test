@@ -1,0 +1,51 @@
+@import '../../../../styles/variables.scss';
+
+.tour {
+  &__container {
+    display: grid;
+    grid-template-columns: 20% auto;
+    align-items: center;
+    gap: 24px;
+    margin-top: 24px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__chips {
+    width: 146px;
+    height: 48px;
+    border: 1px solid $primaryLightGrey;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px 0 17px;
+    &--title {
+      font-size: 16px;
+      line-height: 19px;
+    }
+    &--add {
+      width: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      cursor: pointer;
+    }
+    &:hover {
+      border: 1px solid $primaryLightBlue;
+    }
+  }
+}
+
+.ant-tag-close-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

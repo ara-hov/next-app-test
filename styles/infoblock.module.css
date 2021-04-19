@@ -1,0 +1,141 @@
+.location_icon svg {
+    font-size: 21px;
+    color: transparent;
+    height: 21px;
+}
+
+.event_price {
+    font-family: Geometria-extrabold;
+    font-style: normal;
+    font-size: 32px;
+    line-height: 40px;
+    color: #000000;
+}
+
+.event_price span {
+    font-family: Geometria;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 33px;
+    color: #000000;
+    margin-left: 8px;
+}
+
+.info_section {
+    border: 1px solid #e3e3ec;
+    box-sizing: border-box;
+    padding: 23px;
+    width: 374px;
+}
+
+.price_section {
+    display: flex;
+    align-items: flex-start;
+}
+
+.panorama_text {
+    font-family: Lato;
+    margin: 0 0 0 24px;
+    color: #a9a9b9;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 135px;
+}
+
+.price_section .panorama_text {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.info_address {
+    display: flex;
+    margin-bottom: 17px;
+}
+
+.address_text {
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.map_link {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0085ff;
+}
+
+.address_text > span {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1f1f24;
+}
+
+.qr_section {
+    display: flex;
+    align-items: center;
+}
+.qr_section svg {
+    margin-right: 24px;
+}
+
+.waiter_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #0085ff;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0085ff;
+    height: 48px;
+}
+
+.waiter_btn:first-child {
+    margin: 24px 0 16px;
+}
+
+.waiter_btn svg {
+    margin-right: 8px;
+}
+
+.align_center {
+    align-items: center;
+}
+
+.menu_container {
+    margin-top: 27px;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.menu_item_active,
+.menu_item_disabled {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0085ff;
+    margin-left: 18px;
+}
+.menu_item_disabled {
+    color: #1f1f24;
+}
+
+.booking {
+    margin-left: 46px;
+    border-bottom: 1px solid #eb5757;
+}

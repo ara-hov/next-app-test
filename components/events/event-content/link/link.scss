@@ -1,0 +1,27 @@
+.tourLink {
+  &__container {
+    display: grid;
+    grid-template-columns: 100% auto;
+    align-items: center;
+    grid-gap: 24px;
+    gap: 24px;
+    margin-top: 24px;
+  }
+
+  &__input__container {
+    display: grid;
+    grid-template-columns: 20% auto;
+    align-items: center;
+    grid-gap: 24px;
+    gap: 24px;
+    position: relative;
+  }
+
+  &__close__absolute {
+    position: absolute;
+    top: -18px;
+    left: 98.5%;
+    z-index: 3;
+    cursor: pointer;
+  }
+}

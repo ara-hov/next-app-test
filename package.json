@@ -1,0 +1,63 @@
+{
+  "name": "events-on-prisma-next",
+  "version": "0.1.0",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "studio": "prisma studio",
+    "migrate": "prisma migrate",
+    "generate": "prisma generate",
+    "clear": "rm -rf `pwd`/.next/cache/*",
+    "ts-node": "ts-node --compiler-options '{\"module\":\"CommonJS\"}'",
+    "seed": "prisma db seed --preview-feature"
+  },
+  "dependencies": {
+    "@prisma/client": "^2.20.1",
+    "@svgr/webpack": "^5.5.0",
+    "ant-design": "^1.0.0",
+    "antd": "^4.14.1",
+    "bad-words": "^3.0.4",
+    "clsx": "^1.1.1",
+    "content-disposition": "^0.5.3",
+    "dotenv": "^8.2.0",
+    "final-form": "^4.20.2",
+    "formik": "^2.2.6",
+    "mime": "^2.5.2",
+    "moment": "^2.29.1",
+    "multer": "^1.4.2",
+    "next": "^10.0.9",
+    "next-images": "^1.7.0",
+    "next-translate": "^1.0.5",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-final-form": "^6.5.3",
+    "react-globe.gl": "^2.14.6",
+    "react-lightgallery": "^0.9.0",
+    "react-loading-skeleton": "^2.2.0",
+    "react-phone-input-2": "^2.14.0",
+    "react-router-dom": "^5.2.0",
+    "sass": "^1.32.8",
+    "swiper": "^6.4.15",
+    "swr": "^0.5.4",
+    "three": "^0.126.1",
+    "web-vitals": "^1.0.1",
+    "webpack": "^4.46.0",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^5.5.0",
+    "@types/node": "^14.14.37",
+    "@types/react": "^17.0.3",
+    "autoprefixer": "^10.2.5",
+    "prisma": "^2.20.1",
+    "stylelint-config-recommended": "^4.0.0",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  }
+}

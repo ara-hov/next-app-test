@@ -1,0 +1,27 @@
+@import '~swiper/swiper-bundle.css';
+@import '~antd/dist/antd.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Write your own custom base styles here */
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+/* Write your own custom component styles here */
+.btn-blue {
+  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+}
+
+.btn-red {
+  @apply bg-red-500 text-white font-bold py-2 px-4 rounded;
+}
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+/* Your own custom utilities */

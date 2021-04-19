@@ -1,0 +1,45 @@
+@import 'event-info/eventInfo';
+@import './event-info/country-popup/countryPopup.scss';
+@import 'event-info/eventInfo';
+@import 'event-menu/Menu';
+@import './event-info/map-popup/mapPopup.scss';
+@import './event-content/eventContent.scss';
+@import './event-content/360-tour/tour.scss';
+@import './event-content/link/link.scss';
+
+.events__settings__body {
+  .ant-collapse-header {
+    width: fit-content;
+  }
+  .ant-collapse-icon-position-right
+    > .ant-collapse-item
+    > .ant-collapse-header
+    .ant-collapse-arrow {
+    top: 11px;
+  }
+  .ant-collapse
+    > .ant-collapse-item
+    > .ant-collapse-header
+    .ant-collapse-arrow
+    svg {
+    fill: #eb5757;
+  }
+  .ant-collapse {
+    background-color: #ffffff;
+  }
+  .ant-tabs {
+    overflow: inherit;
+  }
+  .ant-tabs-tabpane {
+    margin-top: -40px;
+  }
+  .ant-tabs-tabpane-active {
+    margin-top: -40px;
+  }
+  .ant-collapse-header {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}

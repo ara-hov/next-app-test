@@ -1,0 +1,315 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.header_dark {
+  background: #000;
+}
+
+.logo {
+  display: block;
+  padding: 1rem 1rem 0 1.5rem;
+}
+
+.header_dark .logo {
+  background: #ffffff;
+}
+
+.header_left {
+  display: flex;
+  align-items: center;
+}
+
+.header_right {
+  display: flex;
+  align-items: center;
+}
+
+.right_menu svg {
+  font-size: 24px;
+  position: relative;
+  cursor: pointer;
+  color: transparent;
+}
+.right_menu {
+  display: flex;
+  align-items: center;
+}
+.right_menu_dropdown {
+}
+.right_menu svg:hover * {
+  stroke: #eb5757;
+}
+
+.header__icon {
+  position: relative;
+  padding: 0 20px;
+}
+.vector_icon svg {
+  font-size: 18px !important;
+}
+.vector_icon svg:hover * {
+  fill: #eb5757 !important;
+  stroke: none;
+}
+.menu_icon {
+  padding: 21px 24px;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 18px;
+}
+.menu_icon rect {
+  transition: all ease 0.3s;
+}
+.menu_icon:hover rect:first-child {
+  width: 14px;
+  transition: all ease 0.3s;
+}
+.menu_icon:hover rect:last-child {
+  width: 24px;
+  transition: all ease 0.3s;
+}
+.header__icon:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  right: 0;
+  width: 1px;
+  background: #ffffff;
+  opacity: 0.2;
+}
+
+.header__icon:last-child:after {
+  display: none;
+}
+
+@media (max-width: 768px){
+    .right_menu svg {
+        font-size: 18px;
+    }
+    .header__icon {
+        padding: 0 15px;
+    }
+    .menu_icon{
+        padding: 1.5rem;
+    }
+    .logo img{
+        max-width: 40px;
+    }
+
+}
+.mobile-menu .ant-drawer-content-wrapper {
+    min-width: 50%;
+}
+
+.mobile-menu .menu-mobile-dropdown {
+    display: none;
+    margin-left: 3.5rem;
+}
+
+.mobile-menu .locale-dropdown-mobile {
+    border: 1px solid;
+    font-size: 14px;
+    height: 35px;
+    width: 72px;
+    color: #1F1F24;
+}
+
+.mobile-menu .ant-drawer-content-wrapper {
+    min-width: 50%;
+}
+
+.mobile-menu .menu-mobile-dropdown .locale-dropdown-mobile {
+    border: 1px solid;
+    font-size: 14px;
+    height: 35px;
+    width: 72px;
+    color: #1F1F24;
+}
+
+.mobile-menu .menu-mobile-dropdown {
+    display: none;
+    margin-left: 3.5rem;
+}
+
+.mobile-menu .mobile-menu-item:after {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 4px;
+     height: 0;
+     transition: all ease .3s;
+     background: #EB5757;
+ }
+
+.mobile-menu .mobile-menu-item a {
+    display: block;
+    color: #1F1F24;
+    transition: all ease .3s;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+.mobile-menu-item .mobile-menu-item-sub  a {
+     position: relative;
+}
+
+.mobile-menu-item .mobile-menu-item-sub  a span {
+    font-size: .5rem;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    color: transparent;
+}
+
+.mobile-menu .mobile-menu-list .mobile-menu-item {
+    padding-left: 3.5rem;
+    height: 3rem;
+    line-height: 3rem;
+    position: relative;
+}
+
+.mobile-menu .mobile-menu-list .mobile-menu-sub .mobile-menu-sub-item:after {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 4px;
+     height: 0;
+     transition: all ease .3s;
+     background: #EB5757;
+}
+
+.mobile-menu .mobile-menu-list .mobile-menu-sub .mobile-menu-sub-item:hover {
+    background: #E3E3EC;
+}
+.mobile-menu .mobile-menu-list .mobile-menu-sub .mobile-menu-sub-item:after {
+     transition: all ease .3s;
+     height: 100%;
+}
+
+.mobile-menu .mobile-menu-list .mobile-menu-sub-item {
+    padding-left: 2.8rem;
+    position: relative;
+}
+
+.mobile-menu .ant-drawer-body {
+    padding: 2.5rem 0;
+}
+
+.mobile-menu-list {
+    width: 50%;
+    border-right: 1px solid #E3E3EC;
+    height: 100%;
+}
+.mobile-menu-list:hover {
+    color: #EB5757;
+    transition: all ease .3s;
+    background: #E3E3EC;
+}
+.mobile-menu-sub {
+    display: block;
+}
+.mobile-menu-sub a {
+    font-size: 1rem;
+}
+
+.mobile-menu-sub a:after {
+     transition: all ease .3s;
+     height: 100%;
+}
+
+@media (max-width: 992px) {
+    .ant-drawer-content-wrapper {
+        min-width: 80%;
+    }
+    .menu-mobile-dropdown {
+        margin-top: 1.5rem;
+        display: block;
+    }
+}
+
+.header_dark .ant-menu {
+    border-bottom: none;
+    background: transparent;
+    line-height: 30px;
+    padding: 0 10px;
+    color: #ffffff;
+    background-color: #000;
+}
+.ant-menu .ant-menu-item, .ant-menu .ant-menu-submenu, .ant-menu .ant-menu-submenu-open.ant-menu-submenu-active {
+    color: #ffffff;
+    border-bottom: none;
+    position: relative;
+    padding: 0 20px !important;
+    margin: 0 !important;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+    transition: color ease .3s;
+}
+.ant-menu .ant-menu-item a {
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+    transition: color ease .3s;
+}
+.ant-menu .ant-menu-item a:hover, .ant-menu .ant-menu-item a:active {
+    color: #EB5757;
+}
+
+.ant-menu-submenu-title .ant-menu-submenu-arrow {
+    display: block;
+    color: #ffffff;
+    transform: rotate(90deg) translateY(-50%);
+    right: -20px;
+}
+
+.ant-menu-submenu-title .ant-menu-submenu-arrow:hover, .ant-menu-submenu-title .ant-menu-submenu-arrow:active {
+    color: #EB5757;
+}
+.ant-menu-submenu-arrow {
+    transform: rotate(-90deg) translateY(-50%);
+    color: #EB5757;
+}
+
+.ant-menu:after {
+     content: '';
+     position: absolute;
+     left: 20px;
+     bottom: 1px;
+     width: 0;
+     height: 2px;
+     background: #EB5757;
+     transition: width ease .3s;
+ }
+
+.ant-menu:hover, .ant-menu:active, .ant-menu.ant-menu-item-selected, .ant-menu.ant-menu-submenu-selected {
+    color: #EB5757 !important;
+    border-bottom: none !important;
+    transition: color ease .3s;
+}
+
+.ant-menu a {
+    color: #EB5757;
+}
+
+.ant-menu a:after {
+     width: 50%;
+     transition: width ease .3s;
+}

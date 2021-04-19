@@ -1,0 +1,44 @@
+.rate_wrapper {
+    display: flex;
+}
+
+.write_text {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: left;
+    color: #1F1F24;
+}
+.write_wrapper{
+    margin-bottom: 32px;
+}
+.rate_wrapper {
+    margin-bottom: 24px;
+}
+.rate_category {
+    margin-right: 16px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 100%;
+    color: #1F1F24;
+}
+.rate_block {
+    margin-left: 32px;
+}
+
+.rate_block:first-child {
+    margin-left: 0;
+}
+
+.rate_block svg {
+    width: 14px;
+    height: 14px;
+
+}
+.rate_block svg path {
+    fill: #C8C8DB;
+}

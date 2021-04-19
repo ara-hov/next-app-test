@@ -1,0 +1,19 @@
+@import 'antd/dist/antd.css';
+@import '@/styles/header.scss';
+@import '@/styles/auth.scss';
+@import '@/styles/globals.css';
+@import '@/styles/app.scss';
+@import '@/styles/header.scss';
+@import '../components/reusable-components/multi-select/ShareableMultiSelect.scss';
+@import '../components/events/index';
+@import '../components/reusable-components/upload-component/ShareableUploadComponent';
+@import '../components/reusable-components/menu/shareableTabMenu.scss';
+@import '../components/reusable-components/button/shareableButton.scss';
+@import '../components/reusable-components/add-button/addButton.scss';
+@import '../components/reusable-components/input/ShareableInput.scss';
+
+@import '~swiper/swiper-bundle.css';
+@import '~swiper/components/pagination/pagination';
+.ant-collapse {
+  background-color: #ffffff;
+}

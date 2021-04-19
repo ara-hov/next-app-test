@@ -1,0 +1,9 @@
+@import '../../../styles/variables.scss';
+
+.addButton__container {
+  width: 25px;
+  height: 25px;
+  background-color: $primaryLightBlue;
+  border-radius: 50%;
+  cursor: pointer;
+}

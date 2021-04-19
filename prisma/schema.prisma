@@ -1,0 +1,182 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DB_URL")
+}
+
+// Country / region
+model Region {
+  id            Int    @id @default(autoincrement())
+  name          String
+  // addresses     Address[]
+  events        Event[]
+}
+
+// model City {
+//   id            Int    @id @default(autoincrement())
+//   name          String
+//   addresses     Address[]
+// }
+
+// model Address {
+//   id            Int     @id @default(autoincrement())
+//   regionId      Int?
+//   cityId        Int?
+//   region        Region? @relation(fields: [regionId], references: [id])
+//   cities        City?   @relation(fields: [cityId], references: [id])
+//   postalCode    String?
+//   street        String?
+//   building      String?
+//   room          String?
+//   events        Event[]
+// }
+
+// location / place
+model Location {
+  id            Int    @id @default(autoincrement())
+  name          String
+  events        EventsOnLocations[]
+}
+
+model LatLng {
+  id                Int     @id @default(autoincrement())
+  latitude          Float
+  longitude         Float
+  events            Event[]
+}
+
+//  Позже это станет коллекцией диапазонов или расписаний для времени дейвтсия события
+// model WorkingTime {
+//   id                Int     @id @default(autoincrement())
+//   startTime         DateTime  @default(now())
+//   endTime           DateTime  @default(now())
+//   events            Event[]
+// }
+
+model Event {
+  id                Int     @id @default(autoincrement())
+  author            String?
+  eventName         String
+  siteName          String?
+  facebookLink      String?
+  instagramLink     String?
+  phone             String?
+  // workingTimeId     Int?
+  // workingTime       WorkingTime?  @relation(fields: [workingTimeId], references: [id])
+  workingTimeFrom   DateTime  @default(now())
+  workingTimeTo     DateTime  @default(now())
+  regionId          Int? // TODO: регионы вынесены в address, но временно попросили вернуть
+  region            Region? @relation(fields: [regionId], references: [id])
+  // addressId         Int?
+  // address           Address?  @relation(fields: [addressId], references: [id])
+  locations         EventsOnLocations[]
+  address           String?
+  mapLink           String?
+  coordinatesId     Int?
+  coordinates       LatLng? @relation(fields: [coordinatesId], references: [id])
+  menuId            Int?
+  menu              Menu? @relation(fields: [menuId], references: [id])
+  contentId         Int?
+  content           Content? @relation(fields: [contentId], references: [id])
+}
+
+model EventsOnLocations {
+  locationId    Int
+  eventId       Int
+  location      Location @relation(fields: [locationId], references: [id])
+  event         Event @relation(fields: [eventId], references: [id])
+
+  @@id([locationId, eventId])
+}
+
+model Kitchen {
+  id            Int     @id @default(autoincrement())
+  name          String
+  menu          MenuKitchens[]
+}
+
+model SpecialMenu {
+  id            Int     @id @default(autoincrement())
+  name          String
+  menu          MenuSpecialMenu[]
+}
+
+model Facility {
+  id            Int     @id @default(autoincrement())
+  name          String
+  menu          MenuFacilities[]
+}
+
+model AveragePrice {
+  id            Int     @id @default(autoincrement())
+  name          String
+  menu          Menu[]
+}
+
+// MENU
+model Menu {
+  id             Int     @id @default(autoincrement())
+  kitchens       MenuKitchens[]
+  specialMenu    MenuSpecialMenu[]
+  facilities     MenuFacilities[]
+  averagePriceId Int?
+  images         Json?
+  averagePrice   AveragePrice? @relation(fields: [averagePriceId], references: [id])
+  event          Event?
+}
+
+model MenuKitchens {
+  kitchenId Int
+  menuId    Int
+  kitchen   Kitchen @relation(fields: [kitchenId], references: [id])
+  menu      Menu @relation(fields: [menuId], references: [id])
+
+  @@id([kitchenId, menuId])
+}
+
+model MenuSpecialMenu {
+  specialMenuId Int
+  menuId        Int
+  specialMenu   SpecialMenu @relation(fields: [specialMenuId], references: [id])
+  menu          Menu @relation(fields: [menuId], references: [id])
+
+  @@id([specialMenuId, menuId])
+}
+
+model MenuFacilities {
+  facilityId    Int
+  menuId        Int
+  facility      Facility @relation(fields: [facilityId], references: [id])
+  menu          Menu @relation(fields: [menuId], references: [id])
+
+  @@id([facilityId, menuId])
+}
+
+// CONTENT
+model Content {
+  id                Int     @id @default(autoincrement())
+  videoOverviewLink String?
+  tours             ContentTours[]
+  tourLink          String?
+  about             String? @db.Text
+  event             Event?
+  media             Json? // {logo, eventPictures, videoOverview}
+}
+
+model Tour {
+  id            Int     @id @default(autoincrement())
+  name          String
+  contents      ContentTours[]
+}
+
+model ContentTours {
+  tourId    Int
+  contentId Int
+  tour      Tour @relation(fields: [tourId], references: [id])
+  content   Content @relation(fields: [contentId], references: [id])
+
+  @@id([tourId, contentId])
+}

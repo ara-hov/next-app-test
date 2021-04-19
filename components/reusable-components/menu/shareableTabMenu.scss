@@ -1,0 +1,12 @@
+@import '../../../styles/variables.scss';
+
+.ant-tabs-tab-btn {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: $primaryLightBlue;
+}
+.ant-collapse > .ant-collapse-item {
+  border: none;
+}

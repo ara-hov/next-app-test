@@ -1,0 +1,21 @@
+.countryPopup__container {
+  &__inputs {
+    display: grid;
+    gap: 24px;
+    margin-top: 24px;
+  }
+  &__country {
+    .ant-collapse-content-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 220px);
+      gap: 19px;
+    }
+  }
+  &__city {
+    .ant-collapse-content-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 220px);
+      gap: 19px;
+    }
+  }
+}

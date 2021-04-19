@@ -1,0 +1,24 @@
+.ant-input {
+  border-radius: 5px;
+  border: 1px solid #a9a9b9;
+}
+
+.input__error {
+  border: 1px solid #eb5757;
+  animation: shake 0.7s backwards;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(-5px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

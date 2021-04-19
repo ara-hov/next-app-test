@@ -1,0 +1,26 @@
+.events__menu {
+  &__elements {
+    display: grid;
+    gap: 24px;
+
+    &__item {
+      display: grid;
+      grid-template-columns: 20% auto;
+
+      .title {
+        margin-top: 16px;
+        font-size: 16px;
+        line-height: 19px;
+        color: #1F1F24;
+      }
+
+      &:last-child {
+        .shareable__select {
+          .ant-select {
+            width: 50% !important;
+          }
+        }
+      }
+    }
+  }
+}

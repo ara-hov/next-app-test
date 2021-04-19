@@ -1,0 +1,266 @@
+.card_small {
+  padding: 34px 0 23px;
+}
+
+.card_small_img {
+  /*max-width: 277px;*/
+  height: 414px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.card_small_img img,
+.card_large_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.wishlist {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.card_small_title {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1f1f24;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+  text-align: left;
+}
+.card_small_title a {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1f1f24;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+.card_small_date {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 120%;
+  color: #eb5757;
+  text-align: left;
+}
+.card_body_wrapper {
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e3e3ec;
+}
+.card_large {
+  padding: 60px 0;
+}
+
+.card_large_img {
+  height: 230px;
+  position: relative;
+}
+
+.card_large_title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #1f1f24;
+  margin-bottom: 16px;
+}
+
+.card_large_desc {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #a9a9b9;
+  margin-bottom: 14px;
+}
+.card_large_footer {
+  display: flex;
+  justify-content: space-between;
+}
+.footer_left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.footer_right {
+  font-family: Geometria-extrabold;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 100%;
+  text-align: right;
+  color: #1f1f24;
+}
+.footer_right span {
+  font-family: Geometria;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 100%;
+  text-align: right;
+  margin-left: 5px;
+}
+.price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+.rate {
+  display: flex;
+  align-items: center;
+}
+.rate svg {
+  width: 14px;
+  height: 14px;
+}
+.rate_btn {
+  background: #1f1f24;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 143.55%;
+  padding: 1px 7px;
+  color: #ffffff;
+  margin-right: 16px;
+}
+.card_car_img {
+  height: 107px;
+}
+.card_car_img img {
+  object-fit: contain;
+  object-position: left;
+}
+.card_car_img .wishlist {
+  top: -26px;
+  right: 0;
+}
+.card_small_price {
+  font-family: Geometria-extrabold;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 100%;
+  text-align: left;
+  color: #1f1f24;
+}
+.card_currency {
+  font-family: Geometria;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 100%;
+}
+.card_unit {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #a9a9b9;
+}
+.event_card {
+  padding: 10px;
+  max-width: 25%;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.event_card_img {
+  width: 100%;
+  /*height: 414px;*/
+  position: relative;
+}
+.event_card_img img {
+  width: 100%;
+  margin-bottom: 16px;
+  /*    height: 100%;
+    object-fit: cover;
+    display: block;
+    object-position: center;*/
+}
+.online {
+  display: flex;
+  align-items: center;
+}
+.live {
+  width: 1.2rem;
+  height: 1.2rem;
+  background: #eb5757;
+  border-radius: 50%;
+}
+.joined {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: #c9ccd3;
+  margin-left: 0.5rem;
+}
+.clubs_card{
+  max-width: calc(33.333% - 24px);
+  margin: 0 12px;
+  padding: 13px 0;
+}
+.footer_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin-top: 16px;
+}
+
+.footer_wrapper .price {
+  margin-top: 25px;
+  font-family: Geometria-extrabold;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 100%;
+  text-align: right;
+  color: #1f1f24;
+}
+.address {
+  font-size: 16px;
+}
+@media (max-width: 1200px) {
+  .event_card {
+    max-width: 33.3%;
+  }
+}
+@media (max-width: 768px) {
+  .card_small_img {
+    height: 350px;
+  }
+  .card_car_img {
+    height: 150px;
+  }
+  .card_car_img img {
+    object-fit: cover;
+  }
+}
+@media (max-width: 576px) {
+  .event_card {
+    max-width: 50%;
+  }
+}
+@media (max-width: 450px) {
+  .event_card {
+    max-width: 80%;
+    margin: 0 auto 10px;
+  }
+}

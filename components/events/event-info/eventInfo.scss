@@ -1,0 +1,59 @@
+@import '../../../styles/variables.scss';
+
+.eventInfo__container {
+  form {
+    display: grid;
+    gap: 24px;
+  }
+  .ant-typography {
+    display: inline-block;
+    margin-top: 40px;
+  }
+
+  &__inputs {
+    position: relative;
+    display: grid;
+    grid-template-columns: 25% auto;
+    gap: 24px;
+    align-items: center;
+    .ant-input,
+    .ant-picker {
+      height: 48px;
+    }
+    &__shareableSelect {
+      .ant-select-selector {
+        height: 48px !important;
+        .ant-select-selection-item {
+          padding-top: 8px;
+          font-size: 16px;
+        }
+      }
+      .ant-select-arrow {
+        color: $primaryRed;
+      }
+    }
+    .react-tel-input {
+      input {
+        width: 100%;
+        height: 48px;
+      }
+    }
+
+    &--validate {
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      color: $primaryRed;
+    }
+  }
+  &__buttons {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: flex-end;
+    gap: 30px;
+    margin-top: 20px;
+    border-top: 1px solid $lighterGrey;
+    padding-top: 40px;
+    margin-top: 50px;
+  }
+}
